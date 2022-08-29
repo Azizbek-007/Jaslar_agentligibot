@@ -6,5 +6,6 @@ def channels_btn():
     i = 1
     for x in channel_link:
         markup.add(InlineKeyboardButton(text=f'{i}-Kanal', url=x))
-    markup.add(InlineKeyboardButton("✅Tekseriw "))
+        i = i + 1
+    markup.add(InlineKeyboardButton("✅Tekseriw", callback_data="check"))
     return markup

@@ -5,7 +5,8 @@ from utils.commonds import  set_default_commands
 logging.basicConfig(level=logging.INFO)
 
 async def on_startup(dp):
-    from handler.user import start
+    from handler.user import developer, start, message
+    from handler.user.callback import check
     await set_default_commands(dp)
 
 if __name__ == '__main__':
