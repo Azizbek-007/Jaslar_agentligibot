@@ -11,5 +11,5 @@ async def send_answer(message: types.Message):
     now = tz.localize(datetime.datetime.now())
     time = now.strftime('%Y-%m-%d %H:%M:%S')
     await message.forward(chat_id)
-    await bot.send_message(chat_id, text=f"👆⏳{time}")
+    await bot.send_message(chat_id, text=f"👆⏳{time}\n\n```{message.from_user.id}```", parse_mode='markdown')
     await message.reply("Sizdiń juwabıńız qabıllandı ✔️")
