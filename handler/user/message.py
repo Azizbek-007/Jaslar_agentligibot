@@ -13,3 +13,5 @@ async def send_answer(message: types.Message):
     await message.forward(chat_id)
     await bot.send_message(chat_id, text=f"👆⏳{time}\n\n```{message.from_user.id}```", parse_mode='markdown')
     await message.reply("Sizdiń juwabıńız qabıllandı ✔️")
+ 
+ 
