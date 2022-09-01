@@ -12,6 +12,6 @@ async def send_answer(message: types.Message):
     moscowZone = datetime.now(tz)
     time = moscowZone.strftime(dt_format)
     a = await message.forward(chat_id)
-    await a.reply(chat_id, text=f"👆⏳{time}\n\n```{message.from_user.id}```", parse_mode='markdown')
+    a.reply(chat_id, text=f"👆⏳{time}\n\n```{message.from_user.id}```", parse_mode='markdown')
     await message.reply("Sizdiń juwabıńız qabıllandı ✔️")
  
