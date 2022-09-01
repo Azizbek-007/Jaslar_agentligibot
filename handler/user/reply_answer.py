@@ -1,11 +1,11 @@
 from aiogram import types
-from filters.forward import Forward
 from loader import dp, bot
 
-@dp.message_handler(Forward(), is_reply=True)
+@dp.message_handler(is_reply=True)
 async def reply_answer(message: types.Message):
     try:
-        forward_user_id = await message.forward_from.id
-        await bot.send_message(forward_user_id, message.text)
+        user_id = message.reply_to_message.text.split('\n')[2]
+        await bot.send_message(user_id, message.text)
+        await message.reply("Jiberildi")
     except:
         await message.answer("User anonim sebepli jiberilmedi 2-usildan paydalanin'")
