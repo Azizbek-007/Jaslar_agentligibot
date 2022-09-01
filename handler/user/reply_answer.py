@@ -8,4 +8,4 @@ async def reply_answer(message: types.Message):
         await bot.send_message(user_id, message.text)
         await message.reply("Jiberildi")
     except:
-        await message.answer("User anonim sebepli jiberilmedi 2-usildan paydalanin'")
+        await message.answer("Jiberimedi")
