@@ -13,5 +13,3 @@ async def nomember(message: types.Message):
 @dp.message_handler(IsMember(), CommandStart(), chat_type=types.ChatType.PRIVATE)
 async def start(message: types.Message):
     await message.answer("Assalawma áleykum. Xosh keldińiz. Usı bot arqalı Siz sorawlarǵa juwap berseńiz boladı.")
-
-
